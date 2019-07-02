@@ -1,0 +1,34 @@
+/*作为普通变量*/
+.one,
+.two {
+  background: #008000;
+}
+h1 {
+  color: #ffffff;
+}
+h2 {
+  color: #ffffff;
+}
+/*作为选择器和属性名的变量*/
+.width {
+  width: 200px;
+  background: #008000;
+}
+.width h3 {
+  color: #ffffff;
+}
+/*作为url的变量*/
+.three {
+  height: 200px;
+  background: url("http://koala-app.com/img/screenshot.png") no-repeat;
+}
+/*定义多个相同名称的变量时*/
+.class1 .class2 {
+  height: 300;
+}
+.class1 .class3 {
+  width: 200;
+}
+.class4 {
+  width: 100;
+}

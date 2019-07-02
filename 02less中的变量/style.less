@@ -1,0 +1,44 @@
+/*作为普通变量*/
+@green:green;
+@white:white;
+.one,.two{
+    background:@green;
+}
+h1{
+    color:@white;
+}
+h2{
+    color:@white;
+}
+/*作为选择器和属性名的变量*/
+@kuan:width;
+.@{kuan}{
+    @{kuan}:200px;
+    background:@green;
+    h3{
+        color:@white;
+    }
+}
+/*作为url的变量*/
+@imageurl:'http://koala-app.com/img/screenshot.png';
+.three{
+    height:200px;
+    background: url("@{imageurl}") no-repeat;
+}
+
+/*定义多个相同名称的变量时*/
+@num:100;
+.class1{
+    @num:200;
+    .class2{
+        @num:250;
+        height:@num;
+        @num:300;
+    }
+    .class3{
+       width:@num;
+    }
+}
+.class4{
+    width:@num;
+}

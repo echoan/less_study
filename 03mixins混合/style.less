@@ -1,0 +1,155 @@
+/*基本混合*/
+.fontstyle{
+    color:red;
+    font-family: '宋体';
+}
+.one h1{
+    .fontstyle;
+    font-size:24px;
+}
+.two h1{
+    .fontstyle;
+    font-size:36px;
+}
+/*不带输出的混合类名后面添加() .fontstyle不会出现在style.css*/
+.fontstyleone(){
+    color:red;
+    font-family: '宋体';
+}
+.three h1{
+    .fontstyle;
+    font-size:24px;
+}
+.four h1{
+    .fontstyle;
+    font-size:36px;
+}
+/*带选择器的混合*/
+.hover_mixins{
+    &:hover{
+        border:1px solid red;
+    }
+}
+.one h1{
+    .hover_mixins
+}
+.two h1{
+    .hover_mixins
+}
+
+/*带参数的混合*/
+.border(@color){
+    border:1px solid @color;
+}
+.three h1{
+    &:hover{
+        .border(yellow)
+    }
+}
+.four h1{
+    &:hover{
+        .border(green)
+    }
+}
+
+/*带参数并且有默认值的混合*/
+.border_default(@color:blue){
+      border:1px solid @color;
+}
+.five h1{
+    &:hover{
+        .border_default();
+    }
+}
+.six h1{
+    &:hover{
+        .border_default(black)
+    }
+}
+/*带多个参数的混合*/
+.many_mixins(@color;@padding:20px;@margin:30px){
+     color:@color;
+     padding:@padding;
+     margin:@margin;
+}
+.seven h1{
+    .many_mixins(red)
+}
+.eight h1{
+    .many_mixins(green, 10px, 10px)
+}
+.nine h1{
+    .many_mixins(pink;5px;5px;)
+}
+//如果传参的括号里面全部都是以“，”或者“;”来分割，那么会依次传给各个参数值
+
+/*定义多个具有相同名称和参数数量的混合*/
+.mixins_same(@color){
+    color:@color;
+}
+.mixins_same(@color,@padding:5px){
+    color2:@color;
+    padding: @padding;
+}
+.mixins_same(@color,@padding,@margin:10px){
+    color3:@color;
+    padding:@padding;
+    margin:@margin;
+}
+.ten h1{
+    .mixins_same(red);
+}
+/*命名参数 是无序的*/
+.mixins_name(@color:red;@padding:10px;@margin:10px){
+      color:@color;
+      padding:@padding;
+      margin:@margin;
+}
+.first h1{
+    .mixins_name(@margin:20px;yellow)
+}
+.second h1{
+    .mixins_name(@padding:20px)
+}
+/*argument 参数传递*/
+.border_style(@style:solid,@color:red){
+    border:2px @arguments;
+}
+.third h1{
+    .border_style(dashed);
+}
+/*匹配模式*/
+.border_match(all,@x:5px){
+    border-radius: @x;
+}
+.border_match(t_l,@x:5px){
+    border-top-left-radius:@x
+}
+.border_match(t_r,@x:5px){
+    border-top-right-radius:@x
+}
+.border_match(b_l,@x:5px){
+    border-bottom-left-radius:@x
+}
+.border_match(b_r,@x:5px){
+    border-bottom-right-radius:@x
+}
+.fourth h1{
+    .border_match(all);
+    background: pink;
+}
+.fivth h1{
+    .border_match(t_l,10px);
+    background:pink;
+}
+/*混合的返回值*/
+.return(@x,@y){
+    @average:((@x + @y)/2);
+    @sum:(@x+@y);
+}
+.last{
+    .return(10px,20px);
+    padding:@average;
+    margin:@sum;
+}
+

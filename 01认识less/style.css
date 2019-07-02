@@ -1,0 +1,16 @@
+/*less写法*/
+.content ul {
+  list-style: none;
+}
+.content li {
+  height: 30px;
+  line-height: 30px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: gray;
+}
+.content li a {
+  text-decoration: none;
+  color: red;
+  font-family: "宋体";
+}
