@@ -1,0 +1,51 @@
+/*lightness() 返回颜色的亮度值 在0-100%之间*/
+.one(@a) when (lightness(@a)>=50%){
+    background:black;
+}
+.one(@a) when (lightness(@a)<50%){
+    background: white;
+}
+.one(@a){
+    color:@a;
+}
+.classone{
+    .one(#7e7e7e)
+}
+.classtwo{
+    .one(#808080)
+}
+/*iscolor isnumber 判断值的类型*/
+.two(@a) when (isnumber(@a)){
+    background: green;
+    color:red;
+}
+.two(@a){
+    a:@a;
+}
+.classthree{
+    .two(100);
+}
+.classfour{
+    .two(#7e7e7e)
+}
+.three(@a) when (iscolor(@a)){
+    background:red;
+}
+.classfive{
+    .three(red)
+}
+.classsix{
+    .three(123)
+}
+/*ispixel,ispercentage.....单位检查函数*/
+.mixin (@a) when (ispixel(@a)) {
+    background-color: black;
+  }
+.mixin (@a) when (ispercentage(@a) ) {
+    background-color: pink;
+  }
+.mixin (@a) {
+    width: @a;
+}
+.class_one { .mixin(960px) }  //background-color: black; width:960px
+.class_two{ .mixin(95%) }  //background-color: white;width:95%

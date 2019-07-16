@@ -1,0 +1,38 @@
+div {
+  /*ceil向上取整*/
+  width: 11px;
+  /*floor向下取整*/
+  width: 10px;
+  /*浮点数换为百分比*/
+  width: 50%;
+  /*四舍五入*/
+  /*计算一个数的平方根原样保持单位*/
+  width: 4px;
+  width: 3px;
+  /*计算数字的绝对值*/
+  width: 100px;
+  /*sin正弦函数*/
+  width: 0.89399666;
+  width: -0.80115264;
+  /*反正弦asin*/
+  width: 1.57079633rad;
+  /*余弦*/
+  width: -0.44807362;
+  /*反余弦*/
+  width: 0rad;
+  /*正切函数*/
+  width: 1.55740772;
+  /*余切函数*/
+  width: 0.78539816rad;
+  /*pi*/
+  width: 3.14159265;
+  /*pow乘方*/
+  width: 8px;
+  /*mod取余*/
+  width: 2;
+  width: 3;
+  width: 1;
+  /*最大最小值*/
+  width: 1px;
+  width: 5px;
+}

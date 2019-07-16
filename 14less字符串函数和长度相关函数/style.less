@@ -1,0 +1,33 @@
+/*escope 将特殊字符进行编码处理*/
+.div{
+    d:escape('#, ^, (, ), {, }, |, :, >, <, ;, ], [ , =');
+}
+/*filter 避免编译*/
+.div1{
+    // filter: e("ms:alwaysHasItsOwnSyntax.For.Stuff()");
+    filter: ~"ms:alwaysHasItsOwnSyntax.For.Stuff()";
+    width: calc(~"960px-100px");
+
+}
+/*%格式化字符串 暂时没明白啥卵用%*/
+.div2{
+    font-family: %( "%a %a" , "Microsoft", "YaHei");
+    font-family: ""Microsoft" "YaHei"";
+
+    font-family: %( "%A %a" , "Microsoft", "YaHei");
+    font-family: "%22Microsoft%22 "YaHei"";
+    font-family: %( "%s %s" , F60, "YaHei");
+    font-family: %( "%s %s" , "Microsoft", "YaHei");
+    font-family: "Microsoft YaHei";
+}
+/*replace 去重*/
+.div3{
+    content: replace("Hello, maizi", "maizi", "LESS");
+    content: replace("Hello, A", "A", "B");
+    n:length(1px solid #0080ff)
+}
+/*extract 返回集合中指定索引的值*/
+.div4{
+    @list: "A", "B", "C", "D";
+    n:extract(@list,4)
+}

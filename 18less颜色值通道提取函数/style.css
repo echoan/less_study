@@ -1,0 +1,21 @@
+div {
+  z-index: 90;
+  z-index: 80%;
+  z-index: 100%;
+}
+.div1 {
+  z-index: 90;
+  z-index: 100%;
+  z-index: 50%;
+}
+.div2 {
+  z-index: 29;
+  z-index: 199;
+  z-index: 150;
+  z-index: 0.8;
+}
+.div3 {
+  z-index: 44%;
+  z-index: 65%;
+}
+/*以上多种方法一般不常使用了解即可*/

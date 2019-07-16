@@ -1,0 +1,12 @@
+.foo(@bg:green,@color:red){
+    background: @bg;
+    color:@color;
+    font-size:18px;
+    font-weight: 100;
+}
+.one{
+    .foo();
+}
+.two{
+    .foo() !important;
+}

@@ -1,0 +1,27 @@
+// .loop(@count) when (@count > 0){
+//     width:(20px*@count);
+//     .loop((@count - 1));
+// }
+// div{
+//     .loop(5)
+// }
+
+// .loop(@count) when (@count > 0){
+//     h@{count}{
+//         padding:(10px * @count);
+//     }
+//     .loop(@count - 1);
+// } 
+// div{
+//    .loop(6)
+// }
+
+.loop(@count) when (@count < 7){
+        h@{count}{
+            padding:(10px * @count);
+        }
+        .loop(@count + 1);
+    } 
+    div{
+       .loop(1)
+    }

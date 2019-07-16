@@ -1,0 +1,28 @@
+/*escope 将特殊字符进行编码处理*/
+.div {
+  d: %23,%20%5E,%20%28,%20%29,%20%7B,%20%7D,%20%7C,%20%3A,%20%3E,%20%3C,%20%3B,%20%5D,%20%5B%20,%20%3D;
+}
+/*filter 避免编译*/
+.div1 {
+  filter: ms:alwaysHasItsOwnSyntax.For.Stuff();
+  width: calc(960px-100px);
+}
+/*%格式化字符串 暂时没明白啥卵用%*/
+.div2 {
+  font-family: ""Microsoft" "YaHei"";
+  font-family: "" Microsoft " " YaHei "";
+  font-family: "%22Microsoft%22 "YaHei"";
+  font-family: "%22Microsoft%22 " YaHei "";
+  font-family: "F60 YaHei";
+  font-family: "Microsoft YaHei";
+}
+/*replace 去重*/
+.div3 {
+  content: "Hello, LESS";
+  content: "Hello, B";
+  n: 3;
+}
+/*extract 返回集合中指定索引的值*/
+.div4 {
+  n: "D";
+}

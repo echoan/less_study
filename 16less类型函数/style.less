@@ -1,0 +1,88 @@
+//如果一个值是一个数字，返回'真(true)',否则返回'假(false)'.
+.m(@x) when (isnumber(@x)){
+    x:@x;
+}
+.div1{
+    .m(123);
+    .m(abc);
+}
+//如果一个值是一个字符串，返回'真(true)',否则返回'假(false)'.
+.n(@x) when (isstring(@x)){
+    x:@x;
+}
+.div2{
+    .n(100);
+    .n('abc');
+}
+
+//如果一个值是一个颜色，返回'真(true)',否则返回'假(false)'.
+.l(@x) when (iscolor(@x)){
+    color:@x;
+}
+.div3{
+    .l(red);
+    .l(123);
+    .l('1ax');
+}
+//如果一个值是一个关键字，返回'真(true)',否则返回'假(false)'.
+.g(@x) when (iskeyword(@x)) {
+ x:@x
+}
+.div4{
+ .g(123);
+ .g("ABC");
+ .g(red);
+ .g(ABC);
+}
+
+//如果一个值是一个url地址，返回'真(true)',否则返回'假(false)'.
+.w(@x) when (isurl(@x)) {
+ x:@x
+}
+.div5{
+ .w(123);
+ .w("ABC");
+ .w(red);
+ .w(ABC);
+ .w(url(arr.jpg));
+}
+
+//如果一个值是带像素长度单位的数字，返回'真(true)',否则返回'假(false)'.
+.x(@x) when (ispixel(@x)) {
+ x:@x
+}
+.div6{
+ .x(123);
+ .x("ABC");
+ .x(red);
+ .x(220px);
+ .x(220cm);
+}
+
+//如果一个值是带em长度单位的数字，返回'真(true)',否则返回'假(false)'.
+.y(@x) when (isem(@x)) {
+ x:@x
+}
+.div7{
+ .y(220px);
+ .y(240em);
+}
+
+//如果一个值是带百分比单位的数字，返回'真(true)',否则返回'假(false)'.
+.z(@x) when (ispercentage(@x)) {
+ x:@x
+}
+.div8{
+ .z(260%);
+ .z(100);
+}
+
+//如果一个值是带指定单位的数字，返回'真(true)',否则返回'假(false)'.
+.q(@x) when (isunit(@x,em)) {
+    x:@x
+  }
+.div9{
+    .q(290em);
+    .q(260%);
+  }
+  

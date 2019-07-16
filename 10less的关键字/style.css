@@ -1,0 +1,12 @@
+.one {
+  background: #008000;
+  color: #ff0000;
+  font-size: 18px;
+  font-weight: 100;
+}
+.two {
+  background: #008000 !important;
+  color: #ff0000 !important;
+  font-size: 18px !important;
+  font-weight: 100 !important;
+}

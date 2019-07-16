@@ -1,0 +1,14 @@
+.one {
+  background: yellow;
+  color: red;
+}
+.one:hover {
+  color: green;
+}
+.one .b {
+  background: yellow;
+}
+.two {
+  color: #fff;
+  background: black;
+}

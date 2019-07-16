@@ -1,0 +1,27 @@
+.div1 {
+  x: 123;
+}
+.div2 {
+  x: 'abc';
+}
+.div3 {
+  color: #ff0000;
+}
+.div4 {
+  x: ABC;
+}
+.div5 {
+  x: url(arr.jpg);
+}
+.div6 {
+  x: 220px;
+}
+.div7 {
+  x: 240em;
+}
+.div8 {
+  x: 260%;
+}
+.div9 {
+  x: 290em;
+}

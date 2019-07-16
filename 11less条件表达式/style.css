@@ -1,0 +1,30 @@
+/*lightness() 返回颜色的亮度值 在0-100%之间*/
+.classone {
+  background: white;
+  color: #7e7e7e;
+}
+.classtwo {
+  background: black;
+  color: #808080;
+}
+/*iscolor isnumber 判断值的类型*/
+.classthree {
+  background: green;
+  color: red;
+  a: 100;
+}
+.classfour {
+  a: #7e7e7e;
+}
+.classfive {
+  background: red;
+}
+/*ispixel,ispercentage.....单位检查函数*/
+.class_one {
+  background-color: black;
+  width: 960px;
+}
+.class_two {
+  background-color: pink;
+  width: 95%;
+}

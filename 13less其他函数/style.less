@@ -1,0 +1,61 @@
+/*less的属性合并*/
+.foo(){
+    background+: #fff000;
+}
+.one{
+    .foo();
+    background+:#4e4e4e; 
+}
+.two{
+    background+_:red;
+    background+_:green; 
+}
+/*color函数将代表颜色的字符串转化为颜色值*/
+.divone{
+    background: color('red');
+}
+/*convert 单位转换 长度 时间 角度*/
+.divtwo{
+    width:convert(10cm,px);
+}
+.divthree{
+    color:convert(300ms,s)
+}
+/*data-uri 将图片资源转换为base64形式 koala不支持该种转换*/
+.divfour{
+    background: data-uri('https://img13.360buyimg.com/mobilecms/s130x130_jfs/t25792/215/1911566869/331199/4e1aa140/5bbf1d23N3a4d87c5.jpg!q90!cc_130x130.webp')
+}
+/*default函数*/
+.x(1){
+    x:1
+}
+.x(2){
+    y:2
+}
+.x(@x) when (default()){
+    z:@x
+}
+.divfive{
+    .x(1);
+}
+.divsix{
+    .x(2);
+}
+.divseven{
+    .x(123)
+}
+
+.y(@x) when (ispixel(@x)) {width:@x}
+.y(@x) when not(default()) {padding:(@x/10)}
+
+.div1{
+ .y(100px)
+}
+.div2{
+ .y(100cm);
+ color:red;
+}
+/*unit 移除或者改变属性值的单位*/
+.div3{
+   width:unit(100px,mm);
+}

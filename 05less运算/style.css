@@ -1,0 +1,18 @@
+.one {
+  width: 600px;
+  height: 400px;
+  background: pink;
+}
+/*涉及到优先级 使用（）来进行区分*/
+.two {
+  width: 700px;
+  height: 1000px;
+  background: skyblue;
+}
+/* 颜色值也可以加减 会将颜色转换为rbg进行运算 然后再在转换为16进制 */
+/*rgb模式他的值是 0~255 ，当你的值超过255 ，那么就会以255进行相加操作*/
+.three {
+  width: 700px;
+  height: 1000px;
+  background: #9b0000;
+}
